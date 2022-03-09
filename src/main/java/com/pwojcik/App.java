@@ -20,12 +20,12 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a message to encrypt: ");
         String message = scanner.nextLine().toLowerCase();
-        System.out.println(caesarCipher.encryption(message));
+        System.out.println(caesarCipher.encrypt(message));
 
 
         System.out.println("Enter a message to decrypt: ");
         message = scanner.nextLine().toLowerCase();
-        System.out.println(caesarCipher.decryption(message));
+        System.out.println(caesarCipher.decrypt(message));
 
     }
 }

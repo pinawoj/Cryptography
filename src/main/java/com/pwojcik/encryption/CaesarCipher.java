@@ -9,9 +9,10 @@ public class CaesarCipher extends Cipher {
     }
 
     @Override
-    public String encryption(String message) {
+    public String encrypt(String message) {
 
         StringBuilder encrypted = new StringBuilder();
+
         for (int i = 0; i < message.length(); i++) {
             if (message.charAt(i) == ' ') {
                 encrypted.append(message.charAt(i));
@@ -24,7 +25,7 @@ public class CaesarCipher extends Cipher {
     }
 
     @Override
-    public String decryption(String message) {
+    public String decrypt(String message) {
 
         StringBuilder decrypted = new StringBuilder();
 

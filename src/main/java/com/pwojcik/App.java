@@ -1,10 +1,8 @@
 package com.pwojcik;
 
-import com.pwojcik.encryption.CaesarCipher;
+import com.pwojcik.cryptography.CaesarCipherCrypto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Scanner;
 
 public class App {
 
@@ -15,17 +13,8 @@ public class App {
 
         LOGGER.info("Running Caesar Cipher...");
 
-        CaesarCipher caesarCipher = new CaesarCipher(SHIFT);
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a message to encrypt: ");
-        String message = scanner.nextLine().toLowerCase();
-        System.out.println(caesarCipher.encrypt(message));
-
-
-        System.out.println("Enter a message to decrypt: ");
-        message = scanner.nextLine().toLowerCase();
-        System.out.println(caesarCipher.decrypt(message));
+        CaesarCipherCrypto caesarCipher = new CaesarCipherCrypto(SHIFT);
+        caesarCipher.encryptFromConsole();
 
     }
 }

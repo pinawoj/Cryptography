@@ -1,4 +1,4 @@
-package com.pwojcik.encryption;
+package com.pwojcik.ciphers;
 
 public class CaesarCipher extends Cipher {
 
@@ -17,7 +17,7 @@ public class CaesarCipher extends Cipher {
             if (message.charAt(i) == ' ') {
                 encrypted.append(message.charAt(i));
             } else {
-                encrypted.append((char) ('a' + (((message.charAt(i) - 'a') + shift) % 26)));
+                encrypted.append((char) ('a' + (((message.toLowerCase().charAt(i) - 'a') + shift) % 26)));
             }
         }
 
@@ -33,7 +33,7 @@ public class CaesarCipher extends Cipher {
             if (message.charAt(i) == ' ') {
                 decrypted.append(message.charAt(i));
             } else {
-                decrypted.append((char) ('a' + (((message.charAt(i) - 'a') - shift) % 26)));
+                decrypted.append((char) ('a' + ((26 + (message.toLowerCase().charAt(i) - 'a') - shift) % 26)));
             }
         }
 

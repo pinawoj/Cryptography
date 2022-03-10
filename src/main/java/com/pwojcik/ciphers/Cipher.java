@@ -1,4 +1,4 @@
-package com.pwojcik.encryption;
+package com.pwojcik.ciphers;
 
 public abstract class Cipher {
 
